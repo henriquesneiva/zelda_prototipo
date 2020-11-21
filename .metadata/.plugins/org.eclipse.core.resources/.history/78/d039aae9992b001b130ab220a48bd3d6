@@ -1,0 +1,39 @@
+package zelda;
+
+import java.awt.Canvas;
+import java.awt.Dimension;
+
+import javax.swing.JFrame;
+
+public class Game extends Canvas implements Runnable {
+	
+	public static JFrame jframe;
+	private final int HIDTH= 160;
+	private final int REIGHT =120;
+	private final int SCALE =3;
+	
+	public Game() {
+		this.setPreferredSize(new Dimension(HIDTH*SCALE,HEIGHT*SCALE));
+		jframe = new JFrame();
+		jframe.add(this);
+		jframe.setResizable(false);
+		jframe.pack();
+		jframe.setLocationRelativeTo(null);
+		jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		jframe.setVisible(true);
+	}
+	
+	
+	public static void main(String args[]) {
+		
+		Game game = new Game();
+		
+	}
+
+	
+	public void run() {
+	
+		
+	}
+
+}
