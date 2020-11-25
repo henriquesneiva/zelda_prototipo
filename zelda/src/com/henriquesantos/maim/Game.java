@@ -16,7 +16,8 @@ import javax.swing.JFrame;
 import com.henrique.entites.Entity;
 import com.henrique.entites.Player;
 import com.henrique.graficos.Spritesheet;
-import com.henrique.wolrd.Wolrd;
+import com.henrique.world.World;
+
 
 
 
@@ -29,29 +30,31 @@ public class Game extends Canvas implements Runnable,KeyListener {
 	public static JFrame jframe;
 	private  Thread thread;
 	private boolean isRunning = true;
-	private final int HIDTH= 160;
-	private final int HEIGHT = 120;
-	private final int SCALE =4;
+	private final int HIDTH= 240;
+	private final int HEIGHT = 160;
+	private final int SCALE =3;
 	
 	private BufferedImage image;
 	
-	public List<Entity> entities;
+	public static List<Entity> entities;
 	public static  Spritesheet spritesheet;
-	public static Wolrd wolrd;
+	public static World world;
 	
-	private Player  player;
+	
+	public static Player  player;
 	
 	public Game() {
 		addKeyListener(this);
 		this.setPreferredSize(new Dimension(HIDTH*SCALE,HEIGHT*SCALE));
 		initframe();
 		//inicializando objetos;
-		wolrd = new Wolrd("/map.png");
 		image = new BufferedImage(HIDTH,HEIGHT,BufferedImage.TYPE_INT_BGR);
 		entities = new ArrayList<Entity>();
-		spritesheet = new Spritesheet("/spritesheet.png");		
-	    player = new Player(0,0,16,16,spritesheet.getSprite(32, 0, 16,16));
+		spritesheet = new Spritesheet("/spritesheet.png");
+		player = new Player(0,0,16,16,spritesheet.getSprite(32, 0, 16,16));
 		entities.add(player);
+		world = new World("/map.png");
+		
 	}
 	
 	public void initframe() {
@@ -99,8 +102,10 @@ public class Game extends Canvas implements Runnable,KeyListener {
 			return;
 		}
 		Graphics g= image.getGraphics();
-		g.setColor(new Color(0,139,19));
+		g.setColor(new Color(0,0,0));
 		g.fillRect(0, 0, HIDTH, HEIGHT);
+		//renderizando o jogo
+		world.render(g);
 		for(int i =0;i < entities.size(); i++) {
 			Entity e = entities.get(i);
 			e.render(g);
