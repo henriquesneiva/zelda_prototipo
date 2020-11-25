@@ -9,6 +9,7 @@ import javax.imageio.ImageIO;
 
 import com.henrique.entites.Enemy;
 import com.henrique.entites.Entity;
+import com.henrique.entites.Weapon;
 import com.henriquesantos.maim.Game;
 
 public class World {
@@ -19,7 +20,7 @@ public class World {
 public World(String path) {
 		
 		try {
-		BufferedImage  map = ImageIO.read(new File("///C:/Users/henrique/eclipse-workspace/zelda/res/map.png"));
+		BufferedImage  map = ImageIO.read(new File("C:/Users/henrique/eclipse-workspace/zelda/res/map.png"));
 		int[] pixeis = new int[map.getWidth()*map.getHeight()];
 		WIDTH = map.getWidth();
 		HEIGHT = map.getHeight();
@@ -44,12 +45,18 @@ public World(String path) {
 				}else if(pixelAtual == 0xFFFF0000) {
 					//enimy
 					Game.entities.add(new Enemy(xx*16, yy*16, 16, 16, Entity.ENEMY_EN));
+					System.out.println("inimigo renderizado");
 				}else if(pixelAtual == 0xFF3BC6B6) {
 					//weapon
+					Game.entities.add(new Weapon(xx*16, yy*16, 16, 16, Entity.WEAPON_EN));
+					System.out.println("inimigo arma");
 				}else if(pixelAtual == 0xFF03C624) {
 					//lifepack
+					
 				}else if(pixelAtual == 0xFFC6C300) {
 					//bullet
+			
+				
 				}
 
 			}

@@ -22,4 +22,5 @@
     <fullyQualifiedTypeName name="com.henriquesantos.maim.Game"/>
     <fullyQualifiedTypeName name="com.henrique.entites.Enemy"/>
     <fullyQualifiedTypeName name="com.henrique.entites.Entity"/>
+    <fullyQualifiedTypeName name="com.henrique.entites.Weapon"/>
 </qualifiedTypeNameHistroy>
