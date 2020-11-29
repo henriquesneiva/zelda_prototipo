@@ -18,9 +18,10 @@
     <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
-    <fullyQualifiedTypeName name="java.awt.Graphics"/>
     <fullyQualifiedTypeName name="com.henriquesantos.maim.Game"/>
     <fullyQualifiedTypeName name="com.henrique.entites.Enemy"/>
     <fullyQualifiedTypeName name="com.henrique.entites.Entity"/>
     <fullyQualifiedTypeName name="com.henrique.entites.Weapon"/>
+    <fullyQualifiedTypeName name="java.awt.Graphics"/>
+    <fullyQualifiedTypeName name="java.awt.Color"/>
 </qualifiedTypeNameHistroy>

@@ -30,8 +30,8 @@ public class Game extends Canvas implements Runnable,KeyListener {
 	public static JFrame jframe;
 	private  Thread thread;
 	private boolean isRunning = true;
-	private final int HIDTH= 240;
-	private final int HEIGHT = 160;
+	public static final int HIDTH= 240;
+	public static final int HEIGHT = 160;
 	private final int SCALE =3;
 	
 	private BufferedImage image;
@@ -108,11 +108,11 @@ public class Game extends Canvas implements Runnable,KeyListener {
 		world.render(g);
 		for(int i =0;i < entities.size(); i++) {
 			Entity e = entities.get(i);
-			e.render(g);
+			e.render(g);}
 			g = bs.getDrawGraphics();
 			g.drawImage(image,0,0,HIDTH*SCALE, HEIGHT*SCALE,null);
 			bs.show();
-		}
+		
 	}
 	
 	public void run() {

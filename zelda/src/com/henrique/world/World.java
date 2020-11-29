@@ -7,8 +7,10 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
+import com.henrique.entites.Bullet;
 import com.henrique.entites.Enemy;
 import com.henrique.entites.Entity;
+import com.henrique.entites.Lifepack;
 import com.henrique.entites.Weapon;
 import com.henriquesantos.maim.Game;
 
@@ -45,17 +47,17 @@ public World(String path) {
 				}else if(pixelAtual == 0xFFFF0000) {
 					//enimy
 					Game.entities.add(new Enemy(xx*16, yy*16, 16, 16, Entity.ENEMY_EN));
-					System.out.println("inimigo renderizado");
+					
 				}else if(pixelAtual == 0xFF3BC6B6) {
 					//weapon
 					Game.entities.add(new Weapon(xx*16, yy*16, 16, 16, Entity.WEAPON_EN));
-					System.out.println("inimigo arma");
+					
 				}else if(pixelAtual == 0xFF03C624) {
 					//lifepack
-					
+					Game.entities.add(new Lifepack(xx*16, yy*16, 16, 16, Entity.LIFEPACK_EN));
 				}else if(pixelAtual == 0xFFC6C300) {
 					//bullet
-			
+					Game.entities.add(new Bullet(xx*16, yy*16, 16, 16, Entity.BULLET_EN));
 				
 				}
 

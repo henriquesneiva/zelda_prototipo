@@ -3,6 +3,7 @@ package com.henrique.entites;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
+import com.henrique.world.Camera;
 import com.henriquesantos.maim.Game;
 
 public class Player extends Entity{
@@ -58,16 +59,19 @@ public class Player extends Entity{
 					index =0;
 				}
 			}
+			
 		}
 		
-	
+		Camera.x = this.getX() - (Game.WIDTH/2);
+		Camera.y = this.getY() - (Game.HEIGHT/2);
+		
 	}
 	
 	public void render(Graphics g) {
 		if(dir == reight_dir) {
-		g.drawImage(rightplayer[index],this.getX(),this.getY(),null);
+		g.drawImage(rightplayer[index],this.getX()- Camera.x,this.getY()- Camera.y,null);
 		}else if(dir == left_dir) {
-			g.drawImage(leftplayer[index],this.getX(),this.getY(),null);
+			g.drawImage(leftplayer[index],this.getX()-Camera.x,this.getY()-Camera.y,null);
 		}
 		
 	}
