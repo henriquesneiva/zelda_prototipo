@@ -16,7 +16,6 @@
     <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
-    <fullyQualifiedTypeName name="com.henriquesantos.maim.Game"/>
     <fullyQualifiedTypeName name="com.henrique.entites.Enemy"/>
     <fullyQualifiedTypeName name="com.henrique.entites.Entity"/>
     <fullyQualifiedTypeName name="com.henrique.entites.Weapon"/>
@@ -26,4 +25,6 @@
     <fullyQualifiedTypeName name="java.awt.event.KeyListener"/>
     <fullyQualifiedTypeName name="com.sun.org.apache.xalan.internal.xsltc.compiler.Template"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="com.henrique.world.Camera"/>
+    <fullyQualifiedTypeName name="com.henriquesantos.maim.Game"/>
 </qualifiedTypeNameHistroy>

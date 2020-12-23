@@ -69,7 +69,7 @@ public class Player extends Entity{
 	
 	public void render(Graphics g) {
 		if(dir == reight_dir) {
-		g.drawImage(rightplayer[index],this.getX()- Camera.x,this.getY()- Camera.y,null);
+		g.drawImage(rightplayer[index],this.getX()-Camera.x,this.getY()-Camera.y,null);
 		}else if(dir == left_dir) {
 			g.drawImage(leftplayer[index],this.getX()-Camera.x,this.getY()-Camera.y,null);
 		}

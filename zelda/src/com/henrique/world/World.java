@@ -72,8 +72,14 @@ public World(String path) {
 	}
 public void render(Graphics g) {
 	
-	for(int xx = 0; xx < WIDTH;xx++) {
-		for(int yy = 0; yy<HEIGHT;yy++) {
+	int xstart = Camera.x/16;
+	int ystart = Camera.y/16;
+	
+	int xfinal = xstart + (Game.WIDTH/16);
+	int yfinal = ystart + (Game.HEIGHT/16);
+	
+	for(int xx = xstart; xx <= xfinal;xx++) {
+		for(int yy = ystart; yy <= yfinal;yy++) {
 			Tile tile = tiles[xx +(yy*WIDTH)];
 			tile.render(g);
 		}
