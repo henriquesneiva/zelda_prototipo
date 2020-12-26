@@ -30,7 +30,7 @@ public class Game extends Canvas implements Runnable,KeyListener {
 	public static JFrame jframe;
 	private  Thread thread;
 	private boolean isRunning = true;
-	public static final int HIDTH= 240;
+	public static final int WIDTH= 240;
 	public static final int HEIGHT = 160;
 	private final int SCALE =3;
 	
@@ -45,10 +45,10 @@ public class Game extends Canvas implements Runnable,KeyListener {
 	
 	public Game() {
 		addKeyListener(this);
-		this.setPreferredSize(new Dimension(HIDTH*SCALE,HEIGHT*SCALE));
+		this.setPreferredSize(new Dimension(WIDTH*SCALE,HEIGHT*SCALE));
 		initframe();
 		//inicializando objetos;
-		image = new BufferedImage(HIDTH,HEIGHT,BufferedImage.TYPE_INT_BGR);
+		image = new BufferedImage(WIDTH,HEIGHT,BufferedImage.TYPE_INT_BGR);
 		entities = new ArrayList<Entity>();
 		spritesheet = new Spritesheet("/spritesheet.png");
 		player = new Player(0,0,16,16,spritesheet.getSprite(32, 0, 16,16));
@@ -103,14 +103,14 @@ public class Game extends Canvas implements Runnable,KeyListener {
 		}
 		Graphics g= image.getGraphics();
 		g.setColor(new Color(0,0,0));
-		g.fillRect(0, 0, HIDTH, HEIGHT);
+		g.fillRect(0, 0, WIDTH, HEIGHT);
 		//renderizando o jogo
 		world.render(g);
 		for(int i =0;i < entities.size(); i++) {
 			Entity e = entities.get(i);
 			e.render(g);}
 			g = bs.getDrawGraphics();
-			g.drawImage(image,0,0,HIDTH*SCALE, HEIGHT*SCALE,null);
+			g.drawImage(image,0,0,WIDTH*SCALE, HEIGHT*SCALE,null);
 			bs.show();
 		
 	}

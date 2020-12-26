@@ -25,7 +25,7 @@ public World(String path) {
 		BufferedImage  map = ImageIO.read(new File("C:/Users/henrique/eclipse-workspace/zelda/res/map.png"));
 		int[] pixeis = new int[map.getWidth()*map.getHeight()];
 		WIDTH = map.getWidth();
-		HEIGHT = map.getHeight();
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         	HEIGHT = map.getHeight();
 		tiles = new Tile[map.getWidth()*map.getHeight()];
 		map.getRGB(0, 0, map.getWidth(), map.getHeight(), pixeis, 0, map.getWidth());
 		
@@ -75,7 +75,7 @@ public void render(Graphics g) {
 	int xstart = Camera.x/16;
 	int ystart = Camera.y/16;
 	
-	int xfinal = xstart + (Game.WIDTH/16);
+	int xfinal = xstart + (Game.WIDTH / 16);
 	int yfinal = ystart + (Game.HEIGHT/16);
 	
 	for(int xx = xstart; xx <= xfinal;xx++) {
