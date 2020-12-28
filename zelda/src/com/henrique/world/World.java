@@ -70,16 +70,24 @@ public World(String path) {
 		}
 		
 	}
+
+public static boolean isFree() {
+	
+}
+
+
 public void render(Graphics g) {
 	
-	int xstart = Camera.x/16;
-	int ystart = Camera.y/16;
+	int xstart = Camera.x >> 4;
+	int ystart = Camera.y >> 4;
 	
-	int xfinal = xstart + (Game.WIDTH / 16);
-	int yfinal = ystart + (Game.HEIGHT/16);
+	int xfinal = xstart + (Game.WIDTH >> 4);
+	int yfinal = ystart + (Game.HEIGHT >> 4);
 	
 	for(int xx = xstart; xx <= xfinal;xx++) {
 		for(int yy = ystart; yy <= yfinal;yy++) {
+			if(xx < 0 || yy < 0 || xx >= WIDTH || yy >= HEIGHT )
+				continue;
 			Tile tile = tiles[xx +(yy*WIDTH)];
 			tile.render(g);
 		}

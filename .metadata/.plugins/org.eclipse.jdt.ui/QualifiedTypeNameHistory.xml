@@ -9,7 +9,6 @@
     <fullyQualifiedTypeName name="com.henrique.entites.Player"/>
     <fullyQualifiedTypeName name="java.awt.event.KeyEvent"/>
     <fullyQualifiedTypeName name="com.henrique.wolrd.Wolrd"/>
-    <fullyQualifiedTypeName name="com.henrique.world.World"/>
     <fullyQualifiedTypeName name="java.nio.file.Path"/>
     <fullyQualifiedTypeName name="java.nio.file.Paths"/>
     <fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
@@ -25,6 +24,7 @@
     <fullyQualifiedTypeName name="java.awt.event.KeyListener"/>
     <fullyQualifiedTypeName name="com.sun.org.apache.xalan.internal.xsltc.compiler.Template"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="com.henrique.world.Camera"/>
     <fullyQualifiedTypeName name="com.henriquesantos.maim.Game"/>
+    <fullyQualifiedTypeName name="com.henrique.world.Camera"/>
+    <fullyQualifiedTypeName name="com.henrique.world.World"/>
 </qualifiedTypeNameHistroy>
